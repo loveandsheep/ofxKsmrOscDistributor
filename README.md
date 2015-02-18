@@ -15,7 +15,7 @@ setup distributor in your class like manager.
 		foo.setup(oscDst);
 	}
 	
-and
+and implement receiver classes like this:
 
 	
 	class Foo{
