@@ -19,7 +19,6 @@ void ofxKsmrOscDistributor::update(){
 	while (receiver.hasWaitingMessages()){
 		ofxOscMessage m;
 		receiver.getNextMessage(&m);
-		cout << "Dst catch :" << m.getAddress() << endl;
 		for (int i = 0;i < receiverList.size();i++){
 
 			for (int j = 0;j < receiverList[i]->addr.size();j++){
@@ -27,7 +26,6 @@ void ofxKsmrOscDistributor::update(){
                 
 				if (strncmp(m.getAddress().c_str(), ad.c_str(), ad.length()) == 0){
 					receiverList[i]->addMessage(m);
-					cout << "add " << m.getAddress() << endl;
 				}
 
 			}
